@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!--<constant name="struts.devMode" value="true" />-->
+	<package name="default" namespace="/" extends="struts-default">
+		<default-action-ref name="IndexAction" ></default-action-ref>
+		<action name="IndexAction" class="IndexAction">
+            <result name="success">
+            	/user/index.jsp
+            </result>
+        </action>
+		<action name="ExternalAction" class="ExternalAction">
+            <result name="simpleInterest">
+            	/user/simpleinterest/panel-simpleInterest.jsp
+            </result>
+            <result name="compoundInterest">
+            	/user/compoundinterest/panel-compoundInterest.jsp
+            </result>
+        </action>
+        <action name="RecordAction" class="RecordAction">
+            <result>
+            	/user/panel-Record.jsp
+            </result>
+        </action>
+		<action name="ExchangeRateAction" class="ExchangeRateAction">
+            <result>
+            	/user/exchangerate/panel-exchangeRate.jsp
+            </result>
+        </action>
+		<action name="LoanRateAction" class="LoanRateAction">
+            <result>
+            	/user/loanrate/panel-LoanRate.jsp
+            </result>
+        </action>
+        <action name="InterestRateAction" class="InterestRateAction">
+        	<result name="demand">
+        		/user/interestrate/panel-demandDeposit.jsp
+        	</result>
+        	<result name="time">
+        		/user/interestrate/panel-timeDeposit.jsp
+        	</result>
+        </action>
+	</package>
+</struts>
